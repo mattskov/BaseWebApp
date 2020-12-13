@@ -7,16 +7,39 @@
   <!-- the classes 'page-header' and 'btn btn-dark' create bootstrap components.  -->
   <!-- Check out more components here: http://getbootstrap.com/components/ -->
   <div class="page-header">
-
+    <% include ../helpers/navbar %>
   
-    <h1>Something Else</h1>
+    <h1>OpenWeather API</h1>
   </div>
 
-  <p>Click on the button for a surprise.</p>
 
-  <button onClick="showPicture()" class="btn btn-dark">Click me</button>
+  <button type="button" onClick="handleSignIn()">Login</button>
+
+  <form onSubmit="handleMessageFormSubmit()" action="">
+  	<label for="post-title">Title</label>
+    <input id="post-title">
+    <br>
+    <label for="post-body">Body</label>
+    <textarea id="post-body"></textarea>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="post-listing"></div>
+
+  <input id="search" type="text" placeholder="Enter City Name">
+  <button type="button" onClick="search()">Search</button>
 
   <div id="image"></div>
+
+  <div id="city"></div>
+
+  <div id="temp"></div>
+
+  <div id="sunset"></div>
+
+  <div id="error"></div>
+
   
 </body>
 

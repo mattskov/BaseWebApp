@@ -13,6 +13,14 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+app.get('/projects', function(request, response) {
+  response.render('pages/projects');
+});
+
+app.get('/about', function(request, response) {
+  response.render('pages/about');
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
